@@ -16,13 +16,13 @@
 // - Whether the user is active (boolean)
 
 // TODO: Create a variable called `username` of type string, set it to your name
-
+let username: string = "ofek";
 
 // TODO: Create a variable called `age` of type number, set it to any age
-
+let age: number = 45;
 
 // TODO: Create a variable called `isActive` of type boolean, set it to true
-
+let isActive: boolean = true;
 
 
 // ============================================
@@ -31,9 +31,9 @@
 // The code below has type errors. Fix them!
 // Hint: Change the VALUES, not the types
 
-let productName: string = 123;          // Fix this line
-let productPrice: number = "49.99";     // Fix this line
-let inStock: boolean = "yes";           // Fix this line
+let productName: number = 123;          // Fix this line
+let productPrice: string = "49.99";     // Fix this line
+let inStock: boolean = true;           // Fix this line
 
 
 // ============================================
@@ -45,11 +45,14 @@ let inStock: boolean = "yes";           // Fix this line
 // - The function should return price * quantity
 
 // TODO: Write the function here
-
+function calculateTotal(price: number, quantity: number){
+    let total: number = price * quantity;
+    return total;
+}
 
 // Test your function (uncomment when ready):
-// const total = calculateTotal(10.99, 3);
-// console.log(total); // Should print: 32.97
+const total = calculateTotal(10.99, 3);
+console.log(total); // Should print: 32.97
 
 
 // ============================================
@@ -62,7 +65,11 @@ let inStock: boolean = "yes";           // Fix this line
 
 // TODO: Write the bonus function here
 
-
+function formatPrice(price: number){
+    let formatted_number : string = "$" + price.toFixed(2);
+    return formatted_number;
+}
+console.log(formatPrice(3.5));
 
 // Don't modify below this line - used for verification
 export { };
